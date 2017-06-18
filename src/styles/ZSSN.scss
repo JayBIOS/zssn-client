@@ -1,0 +1,134 @@
+@import "colors";
+@import "utils";
+
+body {
+  background-color: $light-grey;
+}
+
+.zssn-primary-button {
+  background-color: $light-green !important;
+  color: white !important;
+
+  &:hover {
+    background-color: $green !important;
+  }
+}
+
+#zssn-map {
+  height: 180px;
+}
+
+.zssn-big-map-segment {
+  width: 100%;
+}
+
+#zssn-big-map {
+  height: 247px;
+}
+
+.zssn-header {
+  margin-top: 20px !important;
+}
+
+.zssn-marker {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50% 50% 50% 0;
+  -moz-border-radius: 50% 50% 50% 0;
+  border-radius: 50% 50% 50% 0;
+  background: $light-grey;
+  transform: rotate(-45deg);
+  margin: -19px 0 0 -10px;
+  //animation-name: bounce;
+  //animation-fill-mode: both;
+  //animation-duration: 1s;
+  position: absolute;
+  text-align: left;
+
+  &:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #2F2F2F;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 8px 0 0 8px;
+  }
+}
+
+.zssn-marker-shadow {
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  margin: 11px 0 0 -2px;
+  text-align: left;
+  transform: rotateX(55deg);
+  z-index: -2;
+
+  &:after {
+    content: '';
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin: -13px 0 0 -13px;
+    opacity: 0.0;
+    box-shadow: 0 0 1px 2px #89849b;
+  }
+}
+
+.zssn-pulse {
+  &:after {
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+    animation-delay: 1.1s;
+  }
+}
+
+.ui.horizontal.list:not(.celled) > .item.zssn-align-label:first-child {
+  margin-left: 1em !important;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px) rotate(-45deg)
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px) rotate(-45deg)
+  }
+
+  80% {
+    transform: translateY(-10px) rotate(-45deg)
+  }
+
+  100% {
+    transform: translateY(0) rotate(-45deg)
+  }
+}
