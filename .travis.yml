@@ -1,0 +1,12 @@
+language: node_js
+
+sudo: false
+
+deploy:
+  provider: heroku
+  app:
+    master: zssn
+  on:
+    repo: JayBIOS/zssn-client
+  api_key:
+    secure: km15/2P+ya1nb3xhUTi6yn+SPRyOqde1cIaP4iXUJzpEVUggGEaQcZxRXxGcf3RztBSSBvZxv/t36ekoq+1ZO/OeAOPbfN/0KVBhfEesPeZWMUyYukgqHlE/w4H3V4orwhoxC+76gr5B2kFyP1ucy/W67nvW8XWFmlS3H+j/4ELxQWO9PMaZC9JduO1+T1+Ctgv//tR2j34zL0SEti05AuwD5OcmkQTm+Ut/k1fo2e2l2pRmFK78XkvE8rnwsXaxDzWVcQG6X3Zn66OY1SLNjZa84yItRhPmoJHooXWSMGB1yfDJ7QdTdcekjAhjA86S2DG/WTyEKIutWpvhJrbT7ay3OOdwsw0G8Tx6MZ1QA/4KLdEbMe402HJnvT5eUM5TgjkZX8hHZZaqjr/hU6OGYPZvCmLwU0YIHGL/Io4TfnL3FwP7r/r/4/mKdy5E8uGSufnFBViskq/edrGvXkNapi4J8frQSva5LnPpRha0CCCk+kx2aODyLyb+rRrMxWiBIe77GvNDUp3aSj8rTaz2gs37NfTsJkTrNcENCltaOH841YxGhBnHk6ug1/NGRCFf/qFdAduRIrHnT6bXyYzll5VW6QkCG//uhgUEptawOYslrF/RdStzPBUFIn3k1JQx2zNAQlL5KpQz52D2hwFbtgz9Y4GgdM63+UIDCTvsX9g=
