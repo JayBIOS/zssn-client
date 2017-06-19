@@ -12,7 +12,7 @@
     "build:webpack:dev": "babel webpack.dev.config.babel.js --out-file webpack.config.js",
     "build:client": "cross-env NODE_ENV=production webpack -p --config webpack.config.babel.js --progress",
     "build": "cross-env NODE_ENV=production npm run build:webpack && npm run build:server && npm run build:client",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "author": "Jonathan Batista <jonathan.b.d.o.s@gmail.com>",
   "license": "ISC",
